@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Otsile Sebola — Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ── External Stylesheet ── -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ─── CUSTOM CURSOR ──────────────────────────── -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <!-- ─── SCANLINE OVERLAY ───────────────────────── -->
+    <div id="scanlines"></div>
+
+    <!-- ─── BINARY RAIN TRANSITION OVERLAY ────────── -->
+    <div id="transition-overlay">
+      <canvas id="binary-canvas"></canvas>
+      <div id="transition-label">LOADING_MODULE</div>
+    </div>
+
+    <!-- ─── NAVIGATION ─────────────────────────────── -->
+    <nav>
+      <div class="nav-logo" onclick="goTo('welcome')">OS://PORTFOLIO</div>
+      <div class="nav-links">
+        <a onclick="goTo('welcome')" data-page="welcome">WELCOME</a>
+        <a onclick="goTo('hero')" data-page="hero">HOME</a>
+        <a onclick="goTo('about')" data-page="about">ABOUT</a>
+        <a onclick="goTo('skills')" data-page="skills">SKILLS</a>
+        <a onclick="goTo('projects')" data-page="projects">PROJECTS</a>
+        <a onclick="goTo('resume')" data-page="resume">RESUME</a>
+        <a onclick="goTo('contact')" data-page="contact">CONTACT</a>
+      </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════
+       PAGE 0 — WELCOME / SPLASH
+  ═══════════════════════════════════════════════ -->
+    <section class="page active" id="page-welcome">
+      <div class="geo-bg">
+        <svg viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg">
+          <polygon
+            points="700,50 1300,400 1300,800 700,850 100,800 100,400"
+            fill="none"
+            stroke="#00d4ff"
+            stroke-width=".4"
+          />
+          <polygon
+            points="700,100 1200,380 1200,760 700,800 200,760 200,380"
+            fill="none"
+            stroke="#00d4ff"
+            stroke-width=".3"
+          />
+          <polygon
+            points="700,200 1050,380 1050,680 700,720 350,680 350,380"
+            fill="none"
+            stroke="#00ff9d"
+            stroke-width=".25"
+          />
+          <line
+            x1="700"
+            y1="50"
+            x2="700"
+            y2="850"
+            stroke="#00d4ff"
+            stroke-width=".2"
+          />
+          <line
+            x1="100"
+            y1="400"
+            x2="1300"
+            y2="400"
+            stroke="#00d4ff"
+            stroke-width=".2"
+          />
+        </svg>
+      </div>
+
+      <p class="welcome-pre">// INITIALIZING PORTFOLIO v2.0</p>
+      <h1 class="welcome-name">OTSILE SEBOLA</h1>
+      <p class="welcome-sub">
+        Software Engineer · Full Stack Developer · Tech Enthusiast
+      </p>
+      <p class="welcome-desc">
+        SYSTEM ONLINE — Welcome to my personal portfolio.<br />
+        Explore my work, skills, and experience.<br />
+        // Press ENTER to begin.
+      </p>
+      <button class="btn-enter" onclick="goTo('hero')">
+        <span>◈ ENTER PORTFOLIO ◈</span>
+      </button>
+
+      <div class="ticker-wrap">
+        <div class="ticker" id="ticker">
+          <span>◈ REACT.JS</span><span>◈ NODE.JS</span
+          ><span>◈ IoT SYSTEMS</span> <span>◈ ARDUINO</span
+          ><span>◈ C# / .NET</span><span>◈ MONGODB</span>
+          <span>◈ MAPBOX GL JS</span><span>◈ CYBERSECURITY</span
+          ><span>◈ FULL STACK</span> <span>◈ BELGIUM CAMPUS ITVERSITY</span
+          ><span>◈ SOLAR CAR PROJECT</span> <span>◈ REACT.JS</span
+          ><span>◈ NODE.JS</span><span>◈ IoT SYSTEMS</span>
+          <span>◈ ARDUINO</span><span>◈ C# / .NET</span><span>◈ MONGODB</span>
+          <span>◈ MAPBOX GL JS</span><span>◈ CYBERSECURITY</span
+          ><span>◈ FULL STACK</span> <span>◈ BELGIUM CAMPUS ITVERSITY</span
+          ><span>◈ SOLAR CAR PROJECT</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+       PAGE 1 — HERO
+  ═══════════════════════════════════════════════ -->
+    <section class="page" id="page-hero">
+      <div class="hero-grid">
+        <div>
+          <p class="hero-label">// HELLO, WORLD — I AM</p>
+          <h1 class="hero-name">
+            <span class="first">OTSILE</span><br />SEBOLA
+          </h1>
+          <p class="hero-headline">
+            <span class="hl">Software Engineering Student</span> · Full Stack
+            Web Developer ·
+            <span class="hl">Tech Enthusiast</span>
+          </p>
+          <div class="hero-btns">
+            <button class="btn btn-primary" onclick="goTo('projects')">
+              ◈ VIEW MY WORK
+            </button>
+            <button class="btn btn-secondary" onclick="goTo('contact')">
+              ◈ CONTACT ME
+            </button>
+          </div>
+          <div class="hero-badges">
+            <div class="badge">
+              <div class="badge-dot"></div>
+              Available for opportunities
+            </div>
+            <div class="badge">
+              <div
+                class="badge-dot"
+                style="background: var(--accent); box-shadow: var(--glow)"
+              ></div>
+              Final Year Student — 2026
+            </div>
+            <div class="badge">
+              <div
+                class="badge-dot"
+                style="
+                  background: #f4c542;
+                  box-shadow: 0 0 12px rgba(244, 197, 66, 0.5);
+                "
+              ></div>
+              Full Stack Intern @ Future Interns
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-deco">
+          <div class="hex-ring">
+            <svg
+              viewBox="0 0 180 180"
+              xmlns="http://www.w3.org/2000/svg"
+              class="spin-slow"
+            >
+              <polygon
+                points="90,8 164,50 164,130 90,172 16,130 16,50"
+                fill="none"
+                stroke="#00d4ff"
+                stroke-width="1"
+                stroke-dasharray="4 4"
+              />
+            </svg>
+            <svg
+              viewBox="0 0 180 180"
+              xmlns="http://www.w3.org/2000/svg"
+              class="spin-rev"
+            >
+              <polygon
+                points="90,22 152,58 152,122 90,158 28,122 28,58"
+                fill="none"
+                stroke="#00ff9d"
+                stroke-width=".7"
+                stroke-dasharray="2 6"
+              />
+            </svg>
+            <div class="center-text">FULL<br />STACK<br />DEV</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+       PAGE 2 — ABOUT
+  ═══════════════════════════════════════════════ -->
+    <section class="page" id="page-about">
+      <div class="about-wrapper">
+         
+        <!-- Top row: photo LEFT | bio RIGHT -->
+        <div class="about-top-row">
+           
+          <!-- LEFT — Photo card -->
+          <div class="photo-card">
+            <div class="photo-frame">
+              <!-- Replace src with your actual photo, e.g. src="images/otsile.jpg" -->
+              <img src="IMG-20251127-WA0038 (1).jpg" alt="Otsile Sebola" />
+              <div class="photo-corner pc-tl"></div>
+              <div class="photo-corner pc-br"></div>
+            </div>
+            <div class="photo-name">OTSILE SEBOLA</div>
+            <div class="photo-role">Full Stack Developer</div>
+          </div>
+           
+          <!-- RIGHT — Bio text -->
+          <div class="about-text">
+            <p class="section-tag">// 01. ABOUT_ME</p>
+            <h2 class="section-title">Who I <span>Am</span></h2>
+            <div class="divider"></div>
+            <p class="about-bio">
+              I am a
+              <strong>final-year Bachelor of Computing student</strong> at
+              Belgium Campus ITversity with a strong passion for web programming
+              and software engineering. I enjoy bridging the gap between
+              hardware and software — whether that means building
+              <strong>responsive web applications</strong>, developing complex
+              <strong>IoT integrations</strong>, or diving into C# and backend
+              logic. I am constantly exploring new technologies, from
+              <strong>cybersecurity concepts</strong> to advanced front-end
+              frameworks like <strong>React</strong>, to build practical,
+              real-world solutions.
+            </p>
+          </div>
+           
+        </div>
+         
+        <!-- Bottom row: stats centered across full width -->
+        <div class="about-stats">
+          <div class="stat-box">
+            <div class="stat-num">3+</div>
+            <div class="stat-label">YEARS STUDYING</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">10+</div>
+            <div class="stat-label">TECHNOLOGIES</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">2</div>
+            <div class="stat-label">MAJOR PROJECTS</div>
+          </div>
+        </div>
+         
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+       PAGE 3 — SKILLS
+  ═══════════════════════════════════════════════ -->
+    <section class="page" id="page-skills">
+      <div class="skills-wrapper">
+        <p class="section-tag">// 02. TECH_STACK</p>
+        <h2 class="section-title">My <span>Skills</span></h2>
+        <div class="divider"></div>
+        <div class="skill-categories">
+          <div class="skill-cat">
+            <div class="skill-cat-icon">🖥️</div>
+            <div class="skill-cat-name">FRONTEND DEVELOPMENT</div>
+            <div class="skill-tags">
+              <div class="skill-tag">HTML5</div>
+              <div class="skill-tag">CSS3</div>
+              <div class="skill-tag">JavaScript</div>
+              <div class="skill-tag">React.js</div>
+              <div class="skill-tag">Mapbox GL JS</div>
+            </div>
+          </div>
+
+          <div class="skill-cat">
+            <div class="skill-cat-icon">⚙️</div>
+            <div class="skill-cat-name">BACKEND & PROGRAMMING</div>
+            <div class="skill-tags">
+              <div class="skill-tag">Node.js</div>
+              <div class="skill-tag">C#</div>
+              <div class="skill-tag">REST APIs</div>
+              <div class="skill-tag">Express.js</div>
+            </div>
+          </div>
+
+          <div class="skill-cat">
+            <div class="skill-cat-icon">🔌</div>
+            <div class="skill-cat-name">HARDWARE & SPECIALIZED IT</div>
+            <div class="skill-tags">
+              <div class="skill-tag">Arduino</div>
+              <div class="skill-tag">IoT</div>
+              <div class="skill-tag">Cybersecurity</div>
+              <div class="skill-tag">Embedded Systems</div>
+            </div>
+          </div>
+
+          <div class="skill-cat">
+            <div class="skill-cat-icon">🗄️</div>
+            <div class="skill-cat-name">TOOLS & DATABASES</div>
+            <div class="skill-tags">
+              <div class="skill-tag">MongoDB</div>
+              <div class="skill-tag">MySQL</div>
+              <div class="skill-tag">Git</div>
+              <div class="skill-tag">GitHub</div>
+              <div class="skill-tag">VS Code</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+       PAGE 4 — PROJECTS
+  ═══════════════════════════════════════════════ -->
+    <section class="page" id="page-projects">
+      <div class="projects-wrapper">
+        <p class="section-tag">// 03. PROJECTS</p>
+        <h2 class="section-title">My <span>Work</span></h2>
+        <div class="divider"></div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-num">PROJECT_01</div>
+            <div class="project-title">IoT-Powered Mobile Weather Station</div>
+            <p class="project-desc">
+              A year-long final project developing a mobile weather observation
+              station that leverages IoT to optimize race strategy for solar
+              cars. Combines real-time environmental sensing with data
+              transmission and visualization.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">Arduino</span>
+              <span class="stack-tag">IoT Protocols</span>
+              <span class="stack-tag">Sensors</span>
+              <span class="stack-tag">Backend</span>
+              <span class="stack-tag">Data Viz</span>
+            </div>
+            <a
+              href="https://github.com/ContactHBTNIntranetID/PRJ381"
+              class="project-link"
+            >
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35
+                       6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91
+                       1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09
+                       1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3
+                       6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                />
+              </svg>
+              VIEW ON GITHUB →
+            </a>
+          </div>
+
+          <div class="project-card">
+            <div class="project-num">PROJECT_02</div>
+            <div class="project-title">Dynamic Gaming Community Portal</div>
+            <p class="project-desc">
+              A full-stack web application designed to bring gamers together.
+              Users can create profiles, connect with others, and discuss their
+              favourite titles and platforms — including the latest PlayStation
+              releases and multiplayer strategies.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">React.js</span>
+              <span class="stack-tag">Node.js</span>
+              <span class="stack-tag">MongoDB</span>
+              <span class="stack-tag">MySQL</span>
+              <span class="stack-tag">CSS</span>
+            </div>
+            <a
+              href="https://github.com/lemawe69/WPR-381-Assignment"
+              class="project-link"
+            >
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35
+                       6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91
+                       1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09
+                       1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3
+                       6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                />
+              </svg>
+              VIEW ON GITHUB →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+       PAGE 5 — RESUME / EXPERIENCE
+  ═══════════════════════════════════════════════ -->
+    <section class="page" id="page-resume">
+      <div class="resume-wrapper">
+        <p class="section-tag">// 04. EXPERIENCE</p>
+        <h2 class="section-title">My <span>Journey</span></h2>
+        <div class="divider"></div>
+
+        <div class="resume-cols">
+          <div>
+            <div class="resume-section-title">◈ WORK EXPERIENCE</div>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="tl-role">Full Stack Web Development Intern</div>
+                <div class="tl-org">Future Interns</div>
+                <div class="tl-date">March 2026 – April 2026</div>
+                <p class="tl-desc">
+                  Participating in a fellowship program focused on the practical
+                  application of full-stack web development concepts,
+                  orientation, and skill development in a real-world
+                  environment.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="resume-section-title">◈ EDUCATION</div>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="tl-role">Bachelor of Computing</div>
+                <div class="tl-org">Belgium Campus ITversity</div>
+                <div class="tl-date">Expected Graduation: 2028</div>
+                <p class="tl-desc">
+                  Final-year student focusing on software engineering, web
+                  programming, and IT project management.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cv-section">
+          <div class="cv-text">
+            <strong>// FULL CURRICULUM VITAE</strong><br />
+            Download my complete résumé for detailed qualifications.
+          </div>
+          <button
+            class="btn btn-green"
+            onclick="window.open('CV-Otsile-Sebola.pdf')"
+          >
+            ◈ DOWNLOAD FULL CV (PDF)
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+       PAGE 6 — CONTACT
+  ═══════════════════════════════════════════════ -->
+    <section class="page" id="page-contact">
+      <div class="contact-wrapper">
+        <p class="section-tag">// 05. CONTACT</p>
+        <h2 class="section-title">Get In <span>Touch</span></h2>
+        <div class="divider"></div>
+
+        <div class="contact-grid">
+          <div>
+            <div class="contact-form" id="contactForm">
+              <div class="form-row">
+                <div class="field">
+                  <label for="cf-name">YOUR NAME</label>
+                  <input type="text" id="cf-name" placeholder="John Doe" />
+                </div>
+                <div class="field">
+                  <label for="cf-email">EMAIL ADDRESS</label>
+                  <input
+                    type="email"
+                    id="cf-email"
+                    placeholder="john@example.com"
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <label for="cf-subject">SUBJECT</label>
+                <input
+                  type="text"
+                  id="cf-subject"
+                  placeholder="Project Inquiry / Collaboration / etc."
+                />
+              </div>
+              <div class="field">
+                <label for="cf-message">MESSAGE</label>
+                <textarea
+                  id="cf-message"
+                  placeholder="Hi Otsile, I'd like to..."
+                ></textarea>
+              </div>
+              <button class="submit-btn" onclick="handleSubmit()">
+                <span>◈ SEND MESSAGE ◈</span>
+              </button>
+              <div class="form-success" id="formSuccess">
+                ✓ MESSAGE_SENT — I'll get back to you soon!
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-sidebar">
+            <div class="contact-card">
+              <div class="cc-label">EMAIL</div>
+              <div class="cc-val">
+                <a href="mailto:otsilesebola7@gmail.com"
+                  >otsilesebola7@gmail.com</a
+                >
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="cc-label">GITHUB</div>
+              <div class="cc-val">
+                <a href="https://github.com/Druxler" target="_blank">
+                  github.com/Druxler
+                </a>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="cc-label">LINKEDIN</div>
+              <div class="cc-val">
+                <a href="https://linkedin.com/in/otsile-sebola" target="_blank">
+                  linkedin.com/in/otsile-sebola
+                </a>
+              </div>
+            </div>
+            <div>
+              <div
+                class="cc-label"
+                style="
+                  font-family: &quot;Share Tech Mono&quot;, monospace;
+                  font-size: 0.6rem;
+                  color: var(--muted);
+                  letter-spacing: 0.15em;
+                  margin-bottom: 0.7rem;
+                "
+              >
+                SOCIAL LINKS
+              </div>
+              <div class="social-links">
+                <a
+                  href="https://github.com/Druxler"
+                  target="_blank"
+                  class="social-btn"
+                >
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61
+                           c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07
+                           5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0
+                           C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44
+                           0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0
+                           9 18.13V22"
+                    />
+                  </svg>
+                  GITHUB
+                </a>
+                <a
+                  href="https://linkedin.com/in/otsile-sebola"
+                  target="_blank"
+                  class="social-btn"
+                >
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7
+                           h-4v-7a6 6 0 0 1 6-6z"
+                    />
+                    <rect x="2" y="9" width="4" height="12" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
+                  LINKEDIN
+                </a>
+                <a href="mailto:otsilesebola7@gmail.com" class="social-btn">
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4
+                           c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                  EMAIL
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── FOOTER ──────────────────────────────────── -->
+    <footer>
+      <span>© 2026 OTSILE SEBOLA — ALL RIGHTS RESERVED</span>
+      <div class="footer-r">
+        <span id="clock">00:00:00</span>
+        <span>PORTFOLIO v2.0</span>
+      </div>
+    </footer>
+
+    <!-- ── External JavaScript (placed at end of body so DOM is ready) ── -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      emailjs.init("txOkb8HWJrk1B9Mf8");
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
